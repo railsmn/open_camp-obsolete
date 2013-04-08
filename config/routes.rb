@@ -1,4 +1,18 @@
 OpenCamp::Application.routes.draw do
+  get "note/index"
+
+  get "note/show"
+
+  get "note/new"
+
+  get "note/edit"
+
+  get "note/create"
+
+  get "note/update"
+
+  get "note/delete"
+
   resources :tasks
 
 
