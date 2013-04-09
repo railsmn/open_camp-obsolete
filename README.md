@@ -65,19 +65,7 @@ Port 3000 in the host computer is forwarded to port 3000 in the virtual machine.
 
 
 
-## Recommended Workflow
-
-The recommended workflow is
-
-* edit on the host computer
-
-* test within the virtual machine
-
-Just clone your Rails fork in the very directory of the Rails development box on the host computer:
-
-    host $ ls
-    README.md   Vagrantfile puppet
-    host $ git clone git@github.com:<your username>/rails.git
+## Host/VirtualMachine Folders
 
 Vagrant mounts that very directory as _/vagrant_ within the virtual machine:
 
