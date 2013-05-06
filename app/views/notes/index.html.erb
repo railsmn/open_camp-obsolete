@@ -14,7 +14,7 @@
     <td><%= note.title %></td>
     <td><%= note.body %></td>
     <td><%= link_to 'Show', note_path(note) %></td>
-    <td></td>
+    <td><%= link_to 'Edit', edit_note_path(note) %></td>
     <td></td>
   </tr>
 <% end %>
