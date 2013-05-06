@@ -25,7 +25,7 @@ class NotesController < ApplicationController
     end
   end
 
-  def update
+  def update    
     @note = Note.find(params[:id])
 
     if @note.update_attributes(params[:note])
@@ -35,6 +35,10 @@ class NotesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+
+    redirect_to notes_url
   end
 end

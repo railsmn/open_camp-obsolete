@@ -15,7 +15,7 @@
     <td><%= note.body %></td>
     <td><%= link_to 'Show', note_path(note) %></td>
     <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td></td>
+    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
