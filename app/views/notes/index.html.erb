@@ -1,2 +1,21 @@
-<h1>Note#index</h1>
-<p>Find me in app/views/note/index.html.erb</p>
+<h1>Listing notes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%= note.title %></td>
+    <td><%= note.body %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>
