@@ -12,9 +12,17 @@ class NotesController < ApplicationController
   end
 
   def edit
+    @note = Note.find(params[:id])
   end
 
   def create
+    @note = Note.new(params[:note])
+
+    if @note.save
+      redirect_to @note, notice: 'Note was successfully created.'
+    else
+      render action: "new"
+    end
   end
 
   def update
