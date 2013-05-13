@@ -8,6 +8,9 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'devise'
 
+gem 'rspec-rails'
+gem 'shoulda'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
