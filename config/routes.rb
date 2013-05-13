@@ -1,4 +1,6 @@
 OpenCamp::Application.routes.draw do
+  devise_for :users
+
   get "note/index"
 
   get "note/show"
