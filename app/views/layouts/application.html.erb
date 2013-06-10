@@ -1,14 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>OpenCamp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title><%= content_for?(:title) ? yield(:title) : 'OpenCamp' %></title>
+    <meta name='description' content=''>
+    <meta name='author' content=''>
+    <%= stylesheet_link_tag 'application', :media => 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
 
-</body>
+  <body>
+    <!-- the #wrap div helps us have a sticky footer  -->
+    <div id='wrap'>
+      <div id='header' class='navbar navbar-static-top'>
+        <div class='navbar-inner'>
+          <div class='container'>
+            <%= render partial: 'layouts/header' %>
+          </div>
+        </div>
+      </div>
+
+      <div id='main'>
+        <div class='container'>
+          <div class='content'>
+            <div class='row'>
+              <div class='span12'>
+                <%= render partial: 'layouts/messages' %>
+                <%= yield %> <!-- this is where the page specific content comes through -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='push'></div> <!-- keep this here. this enables a vertical space to separate #main and #footer -->
+    </div>
+
+    <div id='footer'>
+      <div class='container'>
+        <%= render partial: 'layouts/footer' %>
+      </div>
+    </div>
+  </body>
+
 </html>
