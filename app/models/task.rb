@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :description, :name
+  attr_accessible :due_date, :description, :name
   belongs_to :user
 
   validates :name, presence: true, length: {minimum: 5, maximum: 30}
