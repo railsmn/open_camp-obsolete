@@ -1,7 +1,8 @@
 OpenCamp::Application.routes.draw do
+
+  devise_for :users
   
   resources :notes
-
   resources :tasks
 
   # The priority is based upon order of creation:
