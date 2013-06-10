@@ -24,6 +24,15 @@ OpenCamp::Application.configure do
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'opencamp-a3a99c85fbdd0c39',
+    :password => 'cd2eee3e294e2ee9',
+    :address => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :plain
+  }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
