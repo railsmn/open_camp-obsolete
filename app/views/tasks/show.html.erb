@@ -8,6 +8,11 @@
   <%= @task.description %>
 </p>
 
+<p>
+  <b>Due Date:</b>
+  <%= @task.due_date %>
+</p>
+
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>
