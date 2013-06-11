@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require jquery.ui.datepicker
 //= require_tree .
+
+$(document).ready(function () {
+  $('#task_due_date').datepicker({dateFormat: "yy-mm-dd"});
+});

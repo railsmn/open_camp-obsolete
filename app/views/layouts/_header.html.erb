@@ -1,0 +1,32 @@
+<%= link_to 'OpenCamp', '/tasks', class: 'brand' %>
+<% if user_signed_in? %>
+  <ul class='nav'>
+    <li>
+      <%= link_to 'Tasks', tasks_path %>
+    </li>
+    <li>
+      <%= link_to 'Notes', notes_path %>
+    </li>
+  </ul>
+  <div class='pull-right'>
+    <ul class='nav'>
+      <li>
+        <%= link_to 'Edit account', edit_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to 'Logout', destroy_user_session_path, method: 'delete' %>
+      </li>      
+    </ul>
+  </div>
+<% else %>
+  <div class='pull-right'>
+    <ul class='nav'>
+      <li>
+        <%= link_to 'Sign up', new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to 'Login', new_user_session_path %>
+      </li>
+    </ul>
+  </div>
+<% end %>
