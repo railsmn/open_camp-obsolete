@@ -1,6 +1,8 @@
 OpenCamp
 ========
 
+[![Build Status](https://travis-ci.org/railsmn/open_camp.png?branch=travis)](https://travis-ci.org/railsmn/open_camp) [![Dependency Status](https://gemnasium.com/railsmn/open_camp.png)](https://gemnasium.com/railsmn/open_camp)
+
 We're [RailsMN](http://rails.mn) and helping people learn Rails by building OpenCamp, the free & open source version of [BaseCamp](http://basecamp.com/), a project management application. 
 
 ### Instructions  
