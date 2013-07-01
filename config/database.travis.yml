@@ -1,4 +1,4 @@
-configs: &common
+common: &common
   adapter: postgresql
   encoding: utf8
   pool: 5
@@ -14,5 +14,5 @@ test:
   database: open_camp_test
 
 production:
-<<: *common
+  <<: *common
   database: open_camp_production
