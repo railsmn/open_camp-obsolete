@@ -1,0 +1,14 @@
+language: ruby 
+
+rvm: 
+  - 1.9.3
+  - 2.0.0
+
+before_script: 
+  - psql -c 'create database open_camp_test' -U vagrant
+
+
+# using the default travis ci 'script'
+# see this page for more info
+# http://about.travis-ci.org/docs/user/languages/ruby/#Default-Test-Script
+
