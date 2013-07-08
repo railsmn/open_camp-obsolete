@@ -26,6 +26,9 @@ OpenCamp::Application.configure do
   config.active_record.mass_assignment_sanitizer = :strict
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
+  
+  #CHANGE THESE SETTINGS TO REFLECT YOUR OWN
+  #MAILTRAP SETTINGS
   config.action_mailer.smtp_settings = {
     :user_name => 'opencamp-a3a99c85fbdd0c39',
     :password => 'cd2eee3e294e2ee9',
