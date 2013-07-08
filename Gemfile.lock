@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    addressable (2.3.5)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.3.1.3)
@@ -47,8 +48,17 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
+    excon (0.25.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    heroku (2.39.4)
+      heroku-api (~> 0.3.7)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.7)
+      rest-client (~> 1.6.1)
+      rubyzip
+    heroku-api (0.3.13)
+      excon (~> 0.25.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -59,12 +69,15 @@ GEM
       jquery-rails
       railties (>= 3.1.0)
     json (1.7.7)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.22)
     multi_json (1.7.2)
+    netrc (0.7.7)
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -95,6 +108,8 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -106,6 +121,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    rubyzip (0.9.9)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -141,6 +157,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 3.2.1)
   devise
+  heroku
   jquery-rails
   jquery-ui-rails
   pg
