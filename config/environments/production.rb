@@ -20,6 +20,19 @@ OpenCamp::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.action_mailer.default_url_options = { :host => 'open-camp.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  
+  #CHANGE THESE SETTINGS TO REFLECT YOUR OWN
+  #MAILTRAP SETTINGS
+  config.action_mailer.smtp_settings = {
+    :user_name => 'opencamp-a3a99c85fbdd0c39',
+    :password => 'cd2eee3e294e2ee9',
+    :address => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :plain
+  }
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
