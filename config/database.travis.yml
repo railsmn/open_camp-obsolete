@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: postgres
+  password:
+
+development:
+  <<: *common
+  database: open_camp_development
+
+test:
+  <<: *common
+  database: open_camp_test
+
+production:
+  <<: *common
+  database: open_camp_production

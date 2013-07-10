@@ -1,0 +1,22 @@
+language: ruby 
+
+rvm: 
+  - 1.9.3
+  - 2.0.0
+
+# migrate and rollback to ensure 
+# that migrations are backwards compatible
+before_script: 
+  - rm config/database.yml 
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database open_camp_test' -U postgres
+  - rake db:migrate
+  - rake db:rollback STEP=1000
+  - rake db:migrate
+
+# script: rake
+#
+# using default travis ci 'rake' command to execute test suite
+# see this page for more info
+# http://about.travis-ci.org/docs/user/languages/ruby/#Default-Test-Script
+
