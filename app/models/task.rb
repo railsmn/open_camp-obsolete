@@ -1,6 +1,7 @@
 class Task < ActiveRecord::Base
   attr_accessible :due_date, :description, :name
   belongs_to :user
+  belongs_to :project
 
   validate :due_date_cannot_be_in_the_past
   validates :name, presence: true, length: {minimum: 5, maximum: 30}
