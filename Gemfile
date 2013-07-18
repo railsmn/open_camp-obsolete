@@ -19,7 +19,7 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
-group :test do 
+group :development, :test do 
   gem 'rspec-rails'
   gem 'shoulda'
 end
