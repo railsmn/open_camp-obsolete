@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @project = Project.find(params[:project_id])
     @notes = @project.notes
