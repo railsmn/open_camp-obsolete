@@ -13,11 +13,11 @@
   <tr>
     <td><%= note.title %></td>
     <td><%= note.body %></td>
-    <td><%= link_to 'Show', note_path(note) %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', project_note_path(@project, note) %></td>
+    <td><%= link_to 'Edit', edit_project_note_path(@project, note) %></td>
+    <td><%= link_to 'Destroy', project_note_url(project_id: @project.id, id: note.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
-<%= link_to 'New Note', new_note_path %>
+<%= link_to 'New Note', new_project_note_path(@project) %>

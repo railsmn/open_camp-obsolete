@@ -8,5 +8,5 @@
   <%= @note.body %>
 </p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_project_note_path(@project, @note) %> |
+<%= link_to 'Back', project_notes_path(@project) %>
