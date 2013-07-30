@@ -15,3 +15,7 @@ We've also created a simple Rails Development environment (so you don't have to 
 We'd love your feedback. [Open an issue](https://github.com/railsmn/open_camp/issues), or reach out to the RailsMN organizers, [@derekrockwell](https://twitter.com/derekrockwell) or [@westonplatter](http://twitter.com/westonplatter)
 
 More to come later!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/railsmn/open_camp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
