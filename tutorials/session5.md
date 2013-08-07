@@ -16,7 +16,7 @@ Session 5 - August 12, 2013
   
   1. Making ```rake spec``` work
   
-  ([link to git diff with changes](#))
+  ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/68cf0d818a781f0e9c424fd2312c8ef8b69a9fcc))
   
   We introduced RSpec as our testing framework in session 2. We relied on the command ```rake spec``` to run our test suite. Somewhere since session 2, we changed the Rails Environment or Rake tasks to no longer start and run the RSpec test suite.
   
@@ -40,13 +40,13 @@ Session 5 - August 12, 2013
   
   2. Move ```quiet_assets``` to development/test group
   
-  ([link to git diff with changes](#))
+  ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/748b6f9cfbba88924c646e1058a4bb49b86259e2))
   
   We should move the quiet_assets within the development/test 'block' since the [quiet_assets README](https://github.com/evrone/quiet_assets/blob/master/README.md) file suggests it.
   
   3. Bundle Update
   
-  ([link to git diff with changes](#))
+  ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/edb13788917b6801951b665f3e61dc2d76dfcb6a))
   
   Recently, a couple of our major gems released new versions. Most notably, Rails release 3.2.14. Let's update the ```Gemfile```'s reference to rails an run a bundle udpate, 
   
@@ -68,9 +68,9 @@ Session 5 - August 12, 2013
   
   4. Remove TestUnit
   
-  We're going to be working with RSpec in future sessions, and we'd like to remove TestUnit, the other testing framework that came by default when we created the rails app.
+  ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/16d77f9e45913f34142a6e7837218e51d3aafd57))
   
-  ([link to git diff with changes](#))
+  We're going to be working with RSpec in future sessions, and we'd like to remove TestUnit, the other testing framework that came by default when we created the rails app.
   
   ```shell
   # /vagrant/open_camp
@@ -80,7 +80,7 @@ Session 5 - August 12, 2013
   
   5. Setup RSpec Generators
   
-  ([link to git diff with changes](#))
+  ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/511794e1ed63ff53ca2edf286415b75e58ec9d76))
   
   Since we've committed to RSpec, let's tell rails to automatically generate RSpec test files for us as we create new model and controller files. We don't care about view or routing  specs at the moment, but we do want model, controller, helper, and request RSpec files to be generated each time we create a file that will be covered by one of those test types.
   
