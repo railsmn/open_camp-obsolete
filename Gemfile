@@ -20,12 +20,9 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
-group :test do 
+group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
-end
-
-group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
