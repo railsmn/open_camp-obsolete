@@ -9,7 +9,6 @@ gem 'pg'
 gem 'devise'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem 'quiet_assets'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +20,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'quiet_assets'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'better_errors'
