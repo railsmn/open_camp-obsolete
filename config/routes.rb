@@ -4,6 +4,8 @@ OpenCamp::Application.routes.draw do
   
   resources :notes
   resources :tasks
+  
+  resources :projects
 
   root to: 'tasks#index'
 
