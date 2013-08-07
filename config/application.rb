@@ -59,5 +59,15 @@ module OpenCamp
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.initialize_on_precompile = false
+    
+    config.generators do |g|
+      g.test_framework    :rspec, fixture: false
+      g.model_specs       true
+      g.controller_specs  true
+      g.helper_specs      true
+      g.request_specs     true
+      g.view_specs        false
+      g.routing_specs     false
+    end
   end
 end
