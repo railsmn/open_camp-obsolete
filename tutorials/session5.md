@@ -109,7 +109,7 @@ Session 5 - August 12, 2013
 
   1. Create the Project Model
     
-    ([link to git diff with changes](#) - __NOTE:__ schema.rb file changed because we ran `rake db:migrate`)
+    ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/6c3a506c323a3e6e5c4e5420a460236c97c1869a) - __NOTE:__ schema.rb file changed because we ran `rake db:migrate`)
       
     Let's go ahead and create the project.
 
@@ -119,6 +119,7 @@ Session 5 - August 12, 2013
     rails g model Project name:string
     
     ### OUPUT
+    
     vagrant@rails-dev-box:/vagrant/open_camp$ rails g model Project name:string
         invoke  active_record
         create    db/migrate/20130807201045_create_projects.rb
@@ -143,7 +144,7 @@ Session 5 - August 12, 2013
       
       1. RSpec Tests
       
-        ([link to git diff with changes](#))
+        ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/f2913e38a78cebb3e76714823e813fd3c45c3b92))
         
         We'll use the ```shoulda``` gem's rspec expectation matchers to test the ActiveRecord inter model relationships. Make the following changes,
         
@@ -225,7 +226,7 @@ Session 5 - August 12, 2013
         
       3. Implement the relations and see the tests pass
           
-        ([link to git diff with changes](#))
+        ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/f4578dc26e6f63221fa6f305b7ee1e8ec4e27ec8))
           
         So let's go back and implement the ActiveRecord relationhips in the models. 
         
@@ -260,6 +261,7 @@ Session 5 - August 12, 2013
         rake db:migrate
         
         ### OUTPUT
+        
         ==  AddProjectIdToTasksAndNotes: migrating ====================================
         -- add_column(:tasks, :project_id, :integer)
            -> 0.0030s
@@ -316,7 +318,7 @@ Session 5 - August 12, 2013
     
   3. Create the Project Controller, View, and Asset files
   
-    ([link to git diff with changes](#))
+    ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/c16d6a63b97bcf223f580fd81a3dae0ca3d80703))
     
     Since we'll want to create and interact projects, we'll need to create Project routes and a controller to receive RESTful HTTP requests. We can create the Controller and Views via Rails' `scaffold_controller` generator rather than having to manually create all mentioned files.
     
@@ -404,7 +406,7 @@ Session 5 - August 12, 2013
     
     1. Nest the Task and Note Controllers
     
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/e37c6a037201996bacec9f4600ca5272e102119f))
       
       Rails allows (and encourages) us to nest URL routes in order to more explicitly describe object relationships. By placing `resources :tasks` and `resources :notes` inside the `resources :proects` block, we're telling rails that each project has many tasks and notes.
       
@@ -456,7 +458,7 @@ Session 5 - August 12, 2013
       
     2. Remove Task and Note links on Header
     
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/4b073e1585c7c7a9da10c5733612a773e08e434b))
     
       Let's remove the Task and Note links on the header since we redefined the routing logic. We can replace those links with a "Projects" link,
       
@@ -475,7 +477,7 @@ Session 5 - August 12, 2013
       
     3. Create link for user to create a project task and note
       
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/9e69038f36806ec6a1cf485176590817f7f21ee1))
     
       Let's go a project page, and drop a link for the user to create a Project specific Note and Task,
     
@@ -491,7 +493,7 @@ Session 5 - August 12, 2013
       
     4. Redo Task index/_form/show view files to reflect the being neste under Project
     
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/bcfb4df987f70fd4716b6ec33595754ca58bcc44))
       
       Next we want the Task HTML views to reflect the project to which the task is related. Or, more technically correct, we want the links in the HTML to relect the nested URL structure, EG, `/projects/1/tasks/4`. We saw the beginning of this in the previous changes when we created the "New Task" and "New Note" links.
       
@@ -550,7 +552,7 @@ Session 5 - August 12, 2013
       
     5. Change the mailer url for a task
     
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/b5ea7048922c5891fce4c1e1312657112f678167))
       
       We need to update the mailer's link for a created task, 
       
@@ -573,7 +575,7 @@ Session 5 - August 12, 2013
       
     6. Update the Task Controller to handle nested tasks
     
-      ([link to git diff with changes](#))
+      ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/00e7d7222712774c0b2cba5b91090bef6d56ac4c))
       
       Now we need to change the `tasks_controller.rb` to be aware of and supply the `@project` instance variable we defined in the HTML views.
       
@@ -636,4 +638,4 @@ Session 5 - August 12, 2013
       end
       ```
       
-      See the git diff with changes](#) for all the details.
+      See the git diff with changes](https://github.com/railsmn/open_camp/commit/00e7d7222712774c0b2cba5b91090bef6d56ac4c) for all the details.
