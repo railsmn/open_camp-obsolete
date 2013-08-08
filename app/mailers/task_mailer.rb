@@ -8,6 +8,7 @@ class TaskMailer < ActionMailer::Base
   #
   def task_creation(task)
     @task = task
+    @project  = @task.project
     mail to: task.user.email, subject: "New Task Created: #{task.name}"
   end
 end
