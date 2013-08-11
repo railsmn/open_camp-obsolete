@@ -491,11 +491,11 @@ Session 5 - August 12, 2013
       <%= link_to 'Back', projects_path %>
       ```
       
-    4. Redo Task index/_form/show view files to reflect the being neste under Project
+    4. Redo Task index/_form/show view files to reflect the being nested under Project
     
       ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/bcfb4df987f70fd4716b6ec33595754ca58bcc44))
       
-      Next we want the Task HTML views to reflect the project to which the task is related. Or, more technically correct, we want the links in the HTML to relect the nested URL structure, EG, `/projects/1/tasks/4`. We saw the beginning of this in the previous changes when we created the "New Task" and "New Note" links.
+      Next we want the Task HTML views to reflect the project to which the task is related. Or, more technically correct, we want the links in the HTML to reflect the nested URL structure, EG, `/projects/1/tasks/4`. We saw the beginning of this in the previous changes when we created the "New Task" and "New Note" links.
       
       Let's start by changing the links on the `index` page.
       
