@@ -491,6 +491,9 @@ Session 5 - August 12, 2013
       <%= link_to 'Back', projects_path %>
       ```
       
+      __NOTE:__ If you click on the these links, you'll see that the Task and Note pages are broken because of the nested URL changes.  We'll fix the Task and Note pages in the next step.
+      
+      
     4. Redo Task index/_form/show view files to reflect the being nested under Project
     
       ([link to git diff with changes](https://github.com/railsmn/open_camp/commit/bcfb4df987f70fd4716b6ec33595754ca58bcc44))
