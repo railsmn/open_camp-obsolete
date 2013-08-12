@@ -136,7 +136,7 @@ Session 5 - August 12, 2013
     
   2. Relate a Project to Tasks and Notes
     
-      We can relate a Project with Notes and Tasks through the Rails::AcitveRecord ```belongs_to``` and ```has_many``` declarations. And here's where it gets really fun. Rather than merely typing in the relationships, we can practice a little TDD action by:
+      We can relate a Project with Notes and Tasks through the Rails::AcitveRecord ```[belongs_to](http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association)``` and ```[has_many](http://guides.rubyonrails.org/association_basics.html#the-has-many-association)``` [associations](http://guides.rubyonrails.org/association_basics.html). And here's where it gets really fun. Rather than merely typing in the relationships, we can practice a little TDD action by:
     
         1. write the RSpec tests for the relations
         2. run the tests and see the tests fail
@@ -277,7 +277,7 @@ Session 5 - August 12, 2013
         
         class Project < ActiveRecord::Base
             has_many :notes
-            has_many :projects
+            has_many :tasks
         end
         ```
         
