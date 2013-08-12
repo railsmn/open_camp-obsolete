@@ -2,11 +2,13 @@ OpenCamp::Application.routes.draw do
 
   devise_for :users
   
-  resources :notes
-  resources :tasks
-
-  root to: 'tasks#index'
-
+  resources :projects do 
+    resources :notes
+    resources :tasks
+  end
+  
+  root to: 'projects#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
