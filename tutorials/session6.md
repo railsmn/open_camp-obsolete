@@ -75,7 +75,7 @@ Within our ```task.rb``` file we need to define the ```days_til_due``` function 
 
 ``` ruby
   def days_til_due
-    (Date.today - due_date).to_i
+    (due_date - Date.today).to_i
   end
 ```
 
