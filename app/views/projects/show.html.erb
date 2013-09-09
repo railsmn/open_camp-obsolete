@@ -9,3 +9,38 @@
 <%= link_to 'New Project Note', new_project_note_path(@project) %> |
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<h3>
+  Tasks
+</h3>
+
+<div class="row-fluid">
+  <div class="span2">
+    <b>Name</b>
+  </div>
+  <div class="span4">
+    <b>Description</b>
+  </div>
+  <div class="span2">
+    <b>Due Date</b>
+  </div>
+  <div class="span2">
+    <b>Due In (days)</b>
+  </div>
+</div>
+<% @project.tasks.each do |task| %>
+<div class="row-fluid">
+  <div class="span2">
+    <%= task.name %>
+  </div>
+  <div class="span4">
+    <%= task.description %>
+  </div>
+  <div class="span2">
+    <%= task.due_date %>
+  </div>
+  <div class="span2">
+    <%= task.days_til_due %>
+  </div>  
+</div>
+<%end%>

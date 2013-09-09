@@ -20,4 +20,8 @@ class Task < ActiveRecord::Base
       end
     end
   end
+
+  def days_til_due
+    (Date.today - due_date).to_i
+  end
 end
