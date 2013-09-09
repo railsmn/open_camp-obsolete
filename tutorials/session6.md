@@ -63,3 +63,30 @@ At the end of ```show.html.erb``` put the following HTML/Ruby (ERB) code underne
 
 This code creates a section that uses some Bootstrap HTML/CSS to space our Task information out nicely. You'll note, however, that when you reload the page you'll get an error referring to the ```tasks.days_til_due``` method call. To fix that, let's update our Task model.
 
+###### Step 1. Modify ```app/models/task.rb```
+Within our ```task.rb``` file we need to define the ```days_til_due``` function so we can use it in our view. The code is as follows (put it beneath the other methods in the file):
+
+``` ruby
+  def days_til_due
+    (Date.today - due_date).to_i
+  end
+```
+
+This function calculates the distance between the Task's saved due date and the current date by using Ruby's 'Date' class. In Ruby, you can subtract Date objects and then convert them to a number (via the ```.to_i``` call) to get the difference in days.
+
+###### Step 1. Lets sort!
+It would make sense if our new table would be sorted by the tasks closest to being due (the lowest 'days_til_due' value). Luckily, Ruby makes this easy to do via sorting ```@project.tasks```.
+
+Open up ```app/views/projects/show.html.erb``` again and change the line 
+
+```ruby
+  <% @project.tasks.each do |task| %>
+```
+
+To:
+
+```ruby
+  <% @project.tasks.sort_by{|task| task.days_til_due}.each do |task| %>
+```
+
+The code should read pretty easily but is using Rails 'sort_by' method on arrays in combination with Ruby's 'block' syntax. [Here is a good introduction to Ruby blocks for more information](http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/)

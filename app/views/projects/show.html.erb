@@ -28,7 +28,7 @@
     <b>Due In (days)</b>
   </div>
 </div>
-<% @project.tasks.each do |task| %>
+<% @project.tasks.sort_by{|task| task.days_til_due}.each do |task| %>
 <div class="row-fluid">
   <div class="span2">
     <%= task.name %>
