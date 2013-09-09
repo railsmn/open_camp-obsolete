@@ -1,0 +1,18 @@
+<div class="row-fluid">
+  <div class="span2">
+    <%= task.name %>
+  </div>
+  <div class="span4">
+    <%= task.description %>
+  </div>
+  <div class="span2">
+    <%= task.due_date %>
+  </div>
+  <div class="span2">
+    <%= task.days_til_due %>
+  </div>  
+  <div class="span2">
+    <%= link_to 'Show', project_task_path(@project, task) %>
+    <%= link_to 'Edit', edit_project_task_path(@project, task) %>
+  </div>
+</div>

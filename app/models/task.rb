@@ -9,6 +9,8 @@ class Task < ActiveRecord::Base
   
   after_save :send_creation_email
 
+  scope :search, lambda {|search| where('name ILIKE ?', "%#{search}%")}
+
   def send_creation_email
     TaskMailer.task_creation(self).deliver
   end

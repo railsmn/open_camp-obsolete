@@ -15,6 +15,13 @@
 </h3>
 
 <div class="row-fluid">
+  <%= form_tag project_tasks_path(@project), remote: true, method: 'get', id: 'tasks_search' do %>
+  <%= text_field_tag :search, '', class: 'input-medium search-query'%>
+  <%= submit_tag "Search", :name => nil, class: 'btn' %>
+  <%end%>
+</div>
+
+<div class="row-fluid">
   <div class="span2">
     <b>Name</b>
   </div>
@@ -27,20 +34,10 @@
   <div class="span2">
     <b>Due In (days)</b>
   </div>
-</div>
-<% @project.tasks.sort_by{|task| task.days_til_due}.each do |task| %>
-<div class="row-fluid">
   <div class="span2">
-    <%= task.name %>
-  </div>
-  <div class="span4">
-    <%= task.description %>
-  </div>
-  <div class="span2">
-    <%= task.due_date %>
-  </div>
-  <div class="span2">
-    <%= task.days_til_due %>
+    <b>Actions</b>
   </div>  
 </div>
-<%end%>
+<div id="tasks">
+  <%= render @tasks %>
+</div>
